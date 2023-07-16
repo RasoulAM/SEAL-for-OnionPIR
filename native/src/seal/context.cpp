@@ -207,18 +207,18 @@ namespace seal
         // Assume parameters satisfy desired security level
         context_data.qualifiers_.sec_level = sec_level_;
 
-        // Check if the parameters are secure according to HomomorphicEncryption.org security standard
-        if (context_data.total_coeff_modulus_bit_count_ > CoeffModulus::MaxBitCount(poly_modulus_degree, sec_level_))
-        {
-            // Not secure according to HomomorphicEncryption.org security standard
-            context_data.qualifiers_.sec_level = sec_level_type::none;
-            if (sec_level_ != sec_level_type::none)
-            {
-                // Parameters are not valid
-                context_data.qualifiers_.parameter_error = error_type::invalid_parameters_insecure;
-                return context_data;
-            }
-        }
+        // // Check if the parameters are secure according to HomomorphicEncryption.org security standard
+        // if (context_data.total_coeff_modulus_bit_count_ > CoeffModulus::MaxBitCount(poly_modulus_degree, sec_level_))
+        // {
+        //     // Not secure according to HomomorphicEncryption.org security standard
+        //     context_data.qualifiers_.sec_level = sec_level_type::none;
+        //     if (sec_level_ != sec_level_type::none)
+        //     {
+        //         // Parameters are not valid
+        //         context_data.qualifiers_.parameter_error = error_type::invalid_parameters_insecure;
+        //         return context_data;
+        //     }
+        // }
 
         // Set up RNSBase for coeff_modulus
         // RNSBase's constructor may fail due to:

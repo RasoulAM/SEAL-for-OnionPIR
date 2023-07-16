@@ -4,6 +4,7 @@
 #pragma once
 
 #include "seal/util/defines.h"
+#include <mutex> // Add this line
 
 #ifdef SEAL_USE_SHARED_MUTEX
 #include <shared_mutex>

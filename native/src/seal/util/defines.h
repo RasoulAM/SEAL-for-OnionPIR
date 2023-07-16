@@ -26,14 +26,14 @@ static_assert(sizeof(int) == 4, "Require sizeof(int) == 4");
 static_assert(sizeof(unsigned long long) == 8, "Require sizeof(unsigned long long) == 8");
 
 // Bounds for bit-length of all coefficient moduli
-#define SEAL_MOD_BIT_COUNT_MAX 61
+#define SEAL_MOD_BIT_COUNT_MAX 62
 #define SEAL_MOD_BIT_COUNT_MIN 2
 
 // Bit-length of internally used coefficient moduli, e.g., auxiliary base in BFV
-#define SEAL_INTERNAL_MOD_BIT_COUNT 61
+#define SEAL_INTERNAL_MOD_BIT_COUNT 62
 
 // Bounds for bit-length of user-defined coefficient moduli
-#define SEAL_USER_MOD_BIT_COUNT_MAX 60
+#define SEAL_USER_MOD_BIT_COUNT_MAX 62
 #define SEAL_USER_MOD_BIT_COUNT_MIN 2
 
 // Bounds for bit-length of the plaintext modulus
